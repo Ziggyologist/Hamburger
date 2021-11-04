@@ -8,10 +8,17 @@
 </head>
 <body>
 
-    <h1>The hambargar!!!</h1>
-    <!-- we deleted all the IDs and replaced them with classes (bcs classes cand host multiple items) -->
+  <div class="container">
 
-<svg class="hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 852.35 315">
+    <div class="row">
+    <h1>THE HAMBARGAR</h1>
+    </div>
+    <div class="row">
+      <p>This is the next generation hamburger. Beware, it moves!</p>
+    </div>
+
+    <div class="hamburger_svg">
+      <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 852.35 315">
     <title>SVG inline style</title>
   
     <g class="patty" style="display:block"> 
@@ -67,15 +74,20 @@
       <path class="seed_burger" data-name="seed_burger" d="M265.38,242a1.51,1.51,0,0,1,1.9,1.66c-.39,2.92-1.58,8.25-5.21,12.4a21.6,21.6,0,0,1-7.18,5.22,3.87,3.87,0,0,1-5.31-4.64,21.39,21.39,0,0,1,4.21-7.82C257.42,244.68,262.54,242.78,265.38,242Z" transform="translate(-136.15 -177)" style="fill: #fff9c6"/>
     </g>
     
-  </svg>
+      </svg>
+  </div>
 
-  <p id="choose">Choose your ingredients:</p>
-  <div class="ingredients">
-    <button id="seeds_button">Sesame seeds</button>
-    <button id="lettuce_button">Lettuce</buttton>
-    <button id="cheese_button">Cheeeeese</button>
-    <button id="ketchup_button">Ketchup</button>
+  <div class="row">
+  <p>Choose your ingredients:</p>
+  </div>
+  <div class=" row ingredients">
+    <a href="#" id="seeds_button" class="ingredient neon-button">Sesame seeds</a>
+    <a href="#" id="lettuce_button" class="ingredient neon-button">Lettuce</a>
+    <a href="#" id="cheese_button" class="ingredient neon-button">Cheeeeese</a>
+    <a href="#" id="ketchup_button" class="ingredient neon-button">Ketchup</a>
+    </div>
   </div> 
+
 
 <script src="script.js"></script>
 </body>

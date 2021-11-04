@@ -1,67 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Open+Sans:wght@400;500;700&display=swap');
+
+*, ::before, ::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 body {
-                background: red;
-                display: grid;
-                place-items: center;
-                width: 90vw;
-                /* height: 60vw;
-                padding: 10px; */
-                min-height: 100vh;
-            }
+    background: #BDBDBD;
+    font-family:'Balsamiq Sans', cursive;
+    }
 
-            h1 {
-                font-size: 4rem;
-                margin-bottom: 1em;
-            }
+.container {
+    display: flex;
+    margin: 0 auto;
+    background-color: #673AB7;
+    width: 90%;
+    flex-direction: column;
+    min-height: 90vh;
+    align-self: center;
+    margin-top: 5vh;
+    justify-content: center;
+}
 
-            .hamburger {
-                /* display: grid; */
-                width: 50vw;
-                /* height: 50vw; */
-                /* margin: auto; */
-                /* align-self: center; */
-                /* align-content: center; */
-                /* overflow: hidden;
-                margin-bottom: 10px; */
-            }
+.row {
+    display: flex;
+    align-self: center;
+}
 
-            .ingredients {
-                /* display: inline-block;
-                margin: auto;
-                justify-content: center;
-                margin-top: 10px;
-                padding: auto; */
-                margin-top: 1em;
-                font-size:2.5rem;
-            }
+.row h1 {
+    font-size: 5vw;
+    color: #E91E63;
+}
 
-            .seed_burger {
-                opacity: 60%;
-            }
+.row p {
+    padding: 0.5rem;
+    font-size: 2vw;
+    margin-bottom: 2rem;
+    COLOR: white;
+}
 
-            #choose {
-                margin-top: 10px;
-            }
+.hamburger_svg {
+    display:flex;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.hamburger {
+    width: 50vw;
+}
+
+.ingredients {
+    font-size:2.5rem;
+    margin-bottom: 2rem;
+}
+
+.seed_burger {
+    opacity: 60%;
+}
+
+.hamburger:hover {
+    animation-name: bounce; 
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    
+    30% {
+        transform: translateY(-20px);
+    }    
+}
+
+.ingredients {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.neon-button {
+    font-size: 2vw;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #E91E63;
+    border:#E91E63 0.125em solid;
+    border-radius: 0.25em;
+    padding: 0.25em 1em;
+    text-shadow:
+    0 0 0.125em hsl(0 0% 100% /.3),
+    0 0 0.125em currentColor;
+    box-shadow:
+    inset 0 0 0.5em 0 #E91E63,
+    0 0 0.5em 0 #E91E63;
+    position: relative;
+}
+
+.neon-button::before {
+    pointer-events:none;
+    content:"";
+    position: absolute;
+    background:#E91E63;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1em) rotateX(30deg) scale(1, 0.35);
+    filter: blur(1.4em);
+    opacity: 0.8;
+}
+
+.neon-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 1em 0.5em #E91E63;   
+    opacity: 0;
+    transition: opacity 10 100ms linear;
+    z-index: -1;
+    background: #E91E63;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+    background: #E91E63;
+    color: #673AB7;
+    text-shadow: none;
+}
+.neon-button:hover::before {
+    opacity: 1;
+}
+.neon-button:hover::after {
+    opacity:1;
+}
 
 
-            .hamburger:hover {
-                animation-name: bounce; 
-                animation-duration: 0.5s;
-                animation-iteration-count: infinite;
-            }
 
-            /* .animation_active {
-                animation-name: bounce; 
-                animation-duration: 1s;
-                animation-iteration-count: 1;} */
-
-            @keyframes bounce {
-                
-                30% {
-                    transform: translateY(-20px);
-                }    
-            }
-
-            #seeds_button, #lettuce_button, #cheese_button, #ketchup_button {
-                margin: 10px;
-                padding: 10px;
-            }
