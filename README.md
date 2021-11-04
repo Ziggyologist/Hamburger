@@ -1,2 +1,1 @@
-# choredoor
-# Hamburger-Project
+This is a project
