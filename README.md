@@ -1,2 +1,0 @@
-# choredoor
-# Hamburger-Project
